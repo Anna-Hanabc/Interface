@@ -12,7 +12,7 @@ import mock
 import HTMLTestRunner
 
 def read_json():
-    with open(base_path + "/Conifg/user_data.json") as f:
+    with open(base_path + "/Config/user_data.json") as f:
         data = json.load(f)
         return data
 

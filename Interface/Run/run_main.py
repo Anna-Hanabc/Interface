@@ -17,9 +17,9 @@ class RunMain:
             #['imooc_001', '登录', 'yes', 'create_user', '/login/', 'post', '{"username":"111111"}', 'yes', 'message', None]
             is_run = data[2]
             if is_run == "yes":
-                url = data[4]
-                method = data[5]
-                data1 = data[6]
+                url = data[5]
+                method = data[6]
+                data1 = data[7]
                 res = request.run_main(method,url,data1)
                 print(res)
 
