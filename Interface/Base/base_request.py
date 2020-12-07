@@ -1,6 +1,11 @@
 #coding = utf-8
 import requests
 import json
+import sys
+import os
+base_path = os.getcwd()
+sys.path.append(base_path)
+from Util.handle_init import handle_ini
 
 class BaseRequest:
     def send_post(self,url,data):
@@ -21,6 +26,10 @@ class BaseRequest:
         '''
         执行方法，传递method，url，data参数
         '''
+        base_url = handle_ini.get_value("host")
+        if 'http' not in url:
+            url = base_url + url
+
         if method == "get":
             res = self.send_get(url,data)
         else:
@@ -32,3 +41,6 @@ class BaseRequest:
         return res
 
 request = BaseRequest()
+if __name__ == "__main__":
+    request = BaseRequest()
+    request.run_main("post","http://www.baidu.com.login","{'username':'123'}")

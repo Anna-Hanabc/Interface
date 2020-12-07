@@ -42,6 +42,8 @@ class HandleExcel():
             row_list.append(i.value)
         return row_list
 
+excel_data = HandleExcel()
+
 if __name__ == "__main__":
     handle = HandleExcel()
     print(handle.get_cell_value(2,5))
