@@ -1,0 +1,13 @@
+[
+    {
+        "request":{"uri":"/login/"},
+        "response":{"json":{"username":"111","password":"222","message":"success"}}
+    },
+    {
+        "request":{"uri":"/register/"},
+        "response":{"text":"register success"}
+    },{
+        "request":{"uri":"/logout/"},
+        "response":{"text":"logout success"}
+    }
+]
