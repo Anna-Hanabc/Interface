@@ -42,11 +42,22 @@ class HandleExcel():
             row_list.append(i.value)
         return row_list
 
+    def excel_write_data(self,row,clos,value):
+        '''
+        向ecxel中写入数据
+        '''
+        wb = self.load_excel()
+        wr = wb.active()
+        wr.cell(row,clos,value)
+        wb.save(base_path+"/Case/imooc.xlsx")
+
+
 excel_data = HandleExcel()
 
 if __name__ == "__main__":
     handle = HandleExcel()
-    print(handle.get_cell_value(2,5))
-    print(handle.get_rows())
-    print(handle.get_rows_value(2))
-    
+    # print(handle.get_cell_value(2,5))
+    # print(handle.get_rows())
+    # print(handle.get_rows_value(2))
+    # handle.excel_write_data(10,1,'hhhan') 这里没有调通
+    pass
